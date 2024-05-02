@@ -32,8 +32,8 @@ float ModifyNums(float a, float b)
 	}
 	if (choice == 5)
 	{
-		cout << "Would you like to square something, (x^y), root something? (x^(1/y)) or move on to trigonometric functions (using only first number)?" << endl;
-		cout << "1 for squaring, 2 for rooting, and 3 for trig functions." << endl;
+		cout << "Would you like to square something, (x^y), root something? (x^(1/y)), use trigonometric functions (using only first number), or use log functions (using 2 or 1 number?" << endl;
+		cout << "1 for squaring, 2 for rooting, 3 for trig functions, and 4 for log functions." << endl;
 
 		cin >> choice;
 
@@ -75,6 +75,24 @@ float ModifyNums(float a, float b)
 			if (choice == 6)
 			{
 				result = 1 / (tan(a));
+			}
+		}
+
+		if (choice == 4)
+		{
+			if (b == 0)
+			{
+				if (a > 0 && a != 1)
+				{
+					result = log10(a);
+				}
+			}
+			else
+			{
+				if (a > 0 && a != 1 && b != 0)
+				{
+					result = (log(b) / log(a));
+				}
 			}
 		}
 	}
